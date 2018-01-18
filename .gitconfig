@@ -1,0 +1,35 @@
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+[user]
+    name = William Newman
+    email = wnewman000@citymail.cuny.edu
+[alias]
+    br = branch -vv
+    ch = cherry -v origin/prod_an @
+    ci = commit
+    co = checkout
+    cp = cherry-pick
+    df = diff -w
+    fe = fetch --prune
+    ff = merge --ff-only
+    lg = log --oneline
+    pl = pull --ff-only
+    rb = rebase
+    st = status
+    vl = log --oneline --decorate --graph
+
+[color]
+    ui = true
+[color "branch"]
+    current = yellow
+    local = green
+    remote = cyan bold
+[push]
+    default = upstream
+[init]
+    templatedir = /home/ubuntu/.git_template
+[gc]
+    auto = 1
